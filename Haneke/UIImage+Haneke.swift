@@ -10,6 +10,22 @@ import UIKit
 
 extension UIImage {
 
+    public class func hnk_getImageFromURL(URL: NSURL, format: Format<UIImage>? = nil, completion: (image: UIImage?, error: NSError?) -> ()) {
+
+        let cache = Shared.imageCache
+
+        // TODO : Introspection/Reflection for UIImage Type, in case it is subclassed.
+        let fetcher = NetworkFetcher<UIImage>(URL: URL)
+
+        cache.fetch(fetcher: fetcher).onSuccess { image in
+            // Do something with image
+            completion(image: image, error: nil)
+            }.onFailure { error in
+                // Do something with error/image
+                completion(image: nil, error: error)
+        }
+    }
+
     func hnk_imageByScalingToSize(toSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(toSize, !hnk_hasAlpha(), 0.0)
         drawInRect(CGRectMake(0, 0, toSize.width, toSize.height))

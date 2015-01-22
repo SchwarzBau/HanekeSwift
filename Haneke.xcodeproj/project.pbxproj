@@ -250,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				8CD6E29819DB65D000F44FCF /* UIButton+Haneke.swift */,
+				A0D7D6831997B2EC000CAF46 /* UIImage+Haneke.swift */,
 				A04210FB19C90292005000B8 /* UIImageView+Haneke.swift */,
 				8C12904A19EE5B040002B336 /* UIView+Haneke.swift */,
 			);
@@ -359,7 +360,6 @@
 				36BB64F419BECE1E006A1309 /* CGSize+Swift.swift */,
 				A0C6BA3919AC0D1E007111E9 /* NSFileManager+Haneke.swift */,
 				A06EE27F19B18C7800572D17 /* String+Haneke.swift */,
-				A0D7D6831997B2EC000CAF46 /* UIImage+Haneke.swift */,
 				A00D360319C36E680007586E /* NSHTTPURLResponse+Haneke.swift */,
 			);
 			name = Extensions;
